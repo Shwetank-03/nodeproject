@@ -1,0 +1,28 @@
+<div class="login-container">
+    <p>Login</p>
+
+    <div class="tab">
+        <button class="tablinks" id="selected" onclick="openProfile(event, 'teacher_login')">Teacher</button>
+        <button class="tablinks" onclick="openProfile(event, 'student_login')">Student</button>
+    </div>
+
+    <div id="teacher_login" class="tabcontent" id="selected">
+        <form action="/teacher/Login" class="form-group" method="post">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" />
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
+            <input type="submit" value="Login" />
+        </form>
+    </div>
+
+    <div id="student_login" class="tabcontent">
+        <form action="/student/login" class="form-group" method="post">
+            <label for="rollno">Roll Number</label>
+            <input id="rollno" type="text" name="rollno"/>
+            <label for="dob">Date of birth</label>
+            <input id="dob" type="date" name="dob"/>
+            <input type="submit" value="Login" />
+        </form>
+    </div>
+    <span class="error-msg" id="err_msg"><%= err_msg %></span>
+</div>

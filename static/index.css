@@ -1,0 +1,108 @@
+/* Style the tab */
+body{
+    background-image: url('login_bb.png');
+    background-position:right;
+    background-size:100%;
+    background-attachment: fixed;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: azure;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: large;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #819df3;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1vh;
+    font-weight: 500;
+}
+
+.navbar {
+    background: linear-gradient(45deg, rgba(0, 123, 255, .5), transparent);
+}
+.navbar-text{
+    /* margin-left: 26vw; */
+    margin: auto;
+    font-size: x-large;
+}
+.login-container, .options-container, .update-record-container{
+    display: list-item;
+    align-items: center;
+}
+.login-container p, .options-container p, .update-record-container p{
+    margin-left: 47vw;
+    font-family: sans-serif;
+    font-size: xx-large;
+    color: cadetblue;
+    margin-top: 5vh;
+    width: 50vw;
+    height: 15vh;
+}
+
+.login-container label, .options-container label, .update-record-container label{
+    margin-top: 1vh;
+    /* display: grid; */
+    width: 20vw;
+}
+.login-container form, .options-container form, .update-record-container form{
+    display: grid;
+    background-color: #e1e7f8;
+}
+.login-container input[type="submit"], .options-container input[type="submit"], .update-record-container input[type="submit"]{
+    width: max-content;
+    margin:auto;
+    margin-top: 3vh;
+}
+.update-record-container form{
+    width: fit-content;
+    margin: auto;
+}
+span{
+    margin: auto;
+    margin-top: 10vh;
+    position: relative;
+    width: fit-content;
+    display: block;
+    color: rgb(237, 41, 41);
+}
+footer{
+    text-align: center;
+    /* margin-bottom: 0; */
+    color: tomato;
+    font-weight: 600;
+    /* float: none; */
+    /* margin-left: 90vh; */
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position:fixed;
+}

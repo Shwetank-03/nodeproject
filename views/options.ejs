@@ -1,0 +1,41 @@
+<button><a href="/">Logout</a></button>
+<div class="options-container">
+    <p>Teacher</p>
+
+    <div class="tab">
+        <button class="tablinks" id="selected" onclick="openProfile(event, 'view_records')">View Records</button>
+        <button class="tablinks" onclick="openProfile(event, 'add_records')">Add Records</button>
+    </div>
+
+    <div id="view_records" class="tabcontent">
+        <table class="table align-middle mb-0 bg-white">
+        <thead>
+            <tr>
+                <th scope="col">Roll Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Score</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+        </table>
+    </div>
+
+    <div id="add_records" class="tabcontent">
+        <form action="/teacher/add" class="form-group" method="post">
+            <label for="rollno">Roll Number</label>
+            <input id="rollno" type="number" name="rollno" />
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text"/>
+            <label for="dob">Date of birth</label>
+            <input id="dob" type="date" name="dob"/>
+            <label for="score">Score</label>
+            <input id="score" type="number" name="score" />
+            <input type="submit" value="Add" />
+        </form>
+    </div>
+    <span class="error-msg" id="err_msg"><%= err_msg %></span>
+</div>
